@@ -17,26 +17,23 @@
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Heading -->
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="CheckIn Open" 
                    FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20" />
 
-        <!-- Passenger Name Label and TextBox -->
         <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0" Text="Passenger Name:"/>
         <TextBox Grid.Row="1" Grid.Column="1" Name="txtPassengerName" Margin="0,5" />
 
-        <!-- Seat Number Label and TextBox -->
         <TextBlock Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="20,0,10,0" Text="Seat Number:"/>
         <TextBox Grid.Row="1" Grid.Column="3" Name="txtSeatNumber" Margin="0,5" />
 
-        <!-- Buttons -->
         <Canvas Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4"  HorizontalAlignment="Center" Margin="0,30,0,0">
             <Button x:Name="btnBoarded" Content="Boarded" Width="100" Height="30" Canvas.Left="-232" Canvas.Top="30" Click="btnBoarded_Click"/>
             <Button x:Name="btnCanceled" Content="Canceled" Width="100" Height="30" Canvas.Left="-47" Canvas.Top="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <Button x:Name="btnViewFlight" Content="View Flight" Width="100" Height="30" Canvas.Left="-47" Canvas.Top="74" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Button Name="btnViewCancelled" Content="View Cancelled Seats" Width="150" Height="30" Canvas.Left="107" Canvas.Top="54"/>
+            <Button Name="btnViewCancelled" Content="View Cancelled Seats" Width="150" Height="30" Canvas.Left="105" Canvas.Top="45"/>
             <Button x:Name="btnBoardedAsync" Content="Boarded Async" Width="100" Height="30" Canvas.Left="-232" Canvas.Top="74" Click="btnBoardedAsync_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
         </Canvas>
+        <TextBlock x:Name="ShowMessage" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" Margin="76,4,52,0" Text=""/>
     </Grid>
 </Window>
