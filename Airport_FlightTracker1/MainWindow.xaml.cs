@@ -48,7 +48,7 @@ namespace Airport_FlightTracker1
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error writing to file: {ex.Message}");
+                MessageBox.Show("Error writing to file:" + ex.Message);
             }
         }
 
@@ -63,11 +63,12 @@ namespace Airport_FlightTracker1
             try
             {
                 /* * In real world when the writing to the file takes long the thread on which UI is working on will not freeze. 
-                   * "await" means process is awaiting response from the other thread that is doing the other task (writing to the file)
-                   * But during the time you waiting the UI task is not jammed. */
+                  */
                 await Task.Delay(3000);
 
                 // Asynchronously write without blocking UI thread
+                /* "await" means process is awaiting response from the other thread that is doing the other task (writing to the file)
+                   * But during the time you waiting the UI task is not jammed. */
                 await File.AppendAllTextAsync(filePath, line + Environment.NewLine);
                 MessageBox.Show("Boarded info logged.");
 
