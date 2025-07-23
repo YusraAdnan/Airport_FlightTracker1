@@ -14,9 +14,7 @@ using System.Diagnostics;
 
 namespace Airport_FlightTracker1
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
         private readonly string filePath;
@@ -62,7 +60,7 @@ namespace Airport_FlightTracker1
 
             try
             {
-                /* * In real world when the writing to the file takes long the thread on which UI is working on will not freeze. 
+                /* In real world when the writing to the file takes long the thread on which UI is working on will not freeze. 
                   */
 
                 await Task.Delay(5000);
